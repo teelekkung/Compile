@@ -1,3 +1,6 @@
 [submodule "xpwn"]
 	path = xpwn
 	url = https://github.com/planetbeing/xpwn.git
+[submodule "libplist"]
+	path = libplist
+	url = https://github.com/libimobiledevice/libplist.git

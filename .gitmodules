@@ -1,9 +1,11 @@
 [submodule "xpwn"]
 	path = xpwn
 	url = https://github.com/planetbeing/xpwn.git
+	branch = master
 [submodule "libplist"]
 	path = libplist
 	url = https://github.com/libimobiledevice/libplist.git
+	branch = master
 [submodule "libusbmuxd"]
 	path = libusbmuxd
 	url = https://github.com/libimobiledevice/libusbmuxd.git

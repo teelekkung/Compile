@@ -25,5 +25,6 @@ cd Compile
 | iBoot64Patcher | https://github.com/tihmstar/iBoot64Patcher |
 | libipatcher | https://github.com/tihmstar/libipatcher |
 | tsschecker | https://github.com/tihmstar/tsschecker |
+| partialZipBrowser | https://github.com/tihmstar/partialZipBrowser.git |
 | futurerestore | https://github.com/marijuanARM/futurerestore |
 | melonDS | https://github.com/Arisotura/melonDS |

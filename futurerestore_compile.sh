@@ -26,12 +26,14 @@ git clone --recursive https://github.com/tihmstar/liboffsetfinder64
 git clone --recursive https://github.com/tihmstar/libipatcher
 git clone --recursive https://github.com/marijuanARM/futurerestore
 
-sudo ln -s $(brew --prefix openssl)/lib/libcrypto.1.1.dylib /usr/local/lib/libcrypto.dylib
-sudo ln -s $(brew --prefix openssl)/lib/libssl.1.1.dylib /usr/local/lib/libssl.dylib
-sudo ln -s $(brew --prefix openssl)/include/openssl /usr/local/include/openssl
-export PKG_CONFIG_PATH="$(brew --prefix openssl)/lib/pkgconfig"
+sudo ln -s $(brew --prefix openssl@1.1)/lib/libcrypto.1.1.dylib /usr/local/lib/libcrypto.dylib
+sudo ln -s $(brew --prefix openssl@1.1)/lib/libssl.1.1.dylib /usr/local/lib/libssl.dylib
+sudo ln -s $(brew --prefix openssl@1.1)/include/openssl /usr/local/include/openssl
+export PKG_CONFIG_PATH="$(brew --prefix openssl@1.1)/lib/pkgconfig"
 sed -i '' 's|#include "xpwn/libxpwn.h"|#include "xpwn/libxpwn.h"\n#include "xpwn/img3.h"|' ./xpwn/ipsw-patch/xpwntool.c
 sed -i '' 's|#   include CUSTOM_LOGGING|//#   include CUSTOM_LOGGING|' ./libgeneral/include/libgeneral/macros.h
+
+git submodule foreach git pull
 
 cd ./xpwn
 cmake -S ./ -B ./compile
@@ -40,11 +42,9 @@ gmake
 sudo cp ./common/libcommon.a /usr/local/lib
 sudo cp ./ipsw-patch/libxpwn.a /usr/local/lib
 sudo cp -r ../includes/* /usr/local/include
-cd ..
-cd ..
 
-cd ./libplist
-./autogen.sh
+cd ../../libplist
+./autogen.sh --without-cython
 sudo gmake install
 cd ..
 

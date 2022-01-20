@@ -55,3 +55,6 @@
 [submodule "melonDS"]
 	path = melonDS
 	url = https://github.com/Arisotura/melonDS.git
+[submodule "partialZipBrowser"]
+	path = partialZipBrowser
+	url = https://github.com/tihmstar/partialZipBrowser.git

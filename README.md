@@ -2,7 +2,7 @@
 Here's common repo I usually use
 ## Tutorial
 ```sh
-git clone --recursive https://github.com/teelekkung/Compile.git
+git clone --recursive git@github.com:teelekkung/Compile.git
 cd Compile
 ```
 ## Original
